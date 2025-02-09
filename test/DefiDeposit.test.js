@@ -20,7 +20,7 @@ describe("DefiDeposit", function () {
         testToken = await TestToken.deploy();
         await testToken.waitForDeployment();
 
-        // 部署 DefiDeposit 合约
+        // 部署 DeFi 存款合约
         const DefiDeposit = await ethers.getContractFactory("DefiDeposit");
         defiDeposit = await DefiDeposit.deploy(await testToken.getAddress());
         await defiDeposit.waitForDeployment();
